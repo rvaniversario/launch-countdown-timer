@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-desaturated-blue: hsl(236, 21%, 26%);
+  --clr-very-dark-blue: hsl(235, 16%, 14%);
+  --clr-very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+  --clr-light-red: hsl(342, 65%, 61%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.875rem;
+  background: linear-gradient(hsl(234, 17%, 12%), hsl(271, 23%, 18%));
+  color: var(--clr-white);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+main {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("./images/pattern-hills.svg");
+  background-repeat: no-repeat;
+  background-position: 85% bottom;
+  height: 100%;
+}
+main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("./images/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 70%;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 0 1rem;
+}
+h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  padding-top: 8rem;
+}
+.launch {
+  display: flex;
+  justify-content: center;
+}
+.launch span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+.launch h2 {
+  font-size: 2.5rem;
+  color: var(--clr-light-red);
+  background: hsl(240, 21%, 22%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 95px;
+  margin: 3rem 0.4rem 1rem;
+}
+.socials {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+}
+.socials img {
+  width: 18px;
+  height: 18px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+.social-link {
+  display: block;
+  margin: 0 0.75rem;
+}
+.social-link path {
+  transition: all 0.3s ease-in;
+}
+.social-link:hover path {
+  fill: var(--clr-light-red);
+}
+
+@media (min-width: 1300px) {
+  main::before {
+    background-size: contain;
+  }
+}
