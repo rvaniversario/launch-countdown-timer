@@ -6,7 +6,7 @@ let current = new Date()
 let currentYear = current.getFullYear()
 let currentMonth = current.getMonth()
 
-const future = new Date(currentYear, currentMonth, 30 + 10, 11, 30, 0)
+const future = new Date(currentYear, currentMonth, 30, 11, 30, 0)
 
 const futureTime = future.getTime()
 function getRemaindingTime() {
